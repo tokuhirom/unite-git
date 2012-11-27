@@ -1,0 +1,14 @@
+unite-git
+=========
+
+This is a unite source for `git ls-files`.
+
+Usage
+-----
+
+Put it to your ~/.vim/bundle/ when you are using pathogen.
+
+unite.vim loads this module automatically. and you can run following command:
+
+    :Unite git
+
