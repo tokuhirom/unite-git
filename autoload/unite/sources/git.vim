@@ -22,7 +22,7 @@ function! s:create_candidate(val)
 endfunction
 
 function! s:source.gather_candidates(args, context)
-    let lines = split(system("git ls-files --cached --others"), "\n")
+    let lines = split(system("git ls-files --cached --others --exclude-standard"), "\n")
     return filter(map(lines, 's:create_candidate(v:val)'), 'len(v:val) > 0')
 endfunction
 
